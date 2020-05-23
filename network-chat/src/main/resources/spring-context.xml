@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="server" class="ru.geekbrains.SERVER.Server">
+        <constructor-arg name="port" index="0" value="9122"/>
+        <constructor-arg name="dataSource" index="1" ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://10.10.0.2:3306/chatusers"/>
+        <property name="username" value="root"/>
+        <property name="password" value="Alcateldc"/>
+    </bean>
+
+</beans>

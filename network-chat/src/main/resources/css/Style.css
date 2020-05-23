@@ -1,0 +1,15 @@
+#mainVbox {
+    -fx-background-color: grey;
+}
+
+#textArea {
+    text-area-background: #dcdcdc;
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+}
+
+#bottomPanel {
+    spacing: 10;
+}
