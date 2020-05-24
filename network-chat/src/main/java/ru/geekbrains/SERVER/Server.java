@@ -1,5 +1,7 @@
 package ru.geekbrains.SERVER;
 
+import org.springframework.stereotype.Component;
+
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -7,10 +9,11 @@ import java.net.Socket;
 import java.sql.SQLException;
 import java.util.Vector;
 
+@Component
 public class Server {
-        private Vector<ClientHandler> clients;
+    private Vector<ClientHandler> clients;
 
-        public Server(int port, DataSource dataSource) throws SQLException {
+    public Server(int port, DataSource dataSource) throws SQLException {
             clients = new Vector<>();
             ServerSocket server = null;
             Socket socket = null;
